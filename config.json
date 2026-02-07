@@ -1,0 +1,88 @@
+{
+    "outputDir":  "site",
+    "resumePath":  "PranavKaushik.pdf",
+    "lookbackHours":  24,
+    "experienceMinYears":  1,
+    "experienceMaxYears":  4,
+    "maxResults":  60,
+    "maxCoverLetters":  10,
+    "coverLetterVariants":  2,
+    "maxEnrichments":  10,
+    "maxContactLookups":  8,
+    "includeKeywords":  [
+                            "software engineer",
+                            "software developer",
+                            "sde",
+                            "swe",
+                            "backend",
+                            "front end",
+                            "frontend",
+                            "full stack",
+                            "full-stack",
+                            "platform",
+                            "mobile",
+                            "android",
+                            "ios"
+                        ],
+    "excludeKeywords":  [
+                            "senior",
+                            "staff",
+                            "principal",
+                            "lead",
+                            "manager",
+                            "director",
+                            "architect"
+                        ],
+    "sources":  [
+                    {
+                        "type":  "remotive"
+                    },
+                    {
+                        "type":  "remoteok"
+                    },
+                    {
+                        "type":  "adzuna"
+                    }
+                ],
+    "adzuna":  {
+                   "enabled":  true,
+                   "appId":  "",
+                   "appKey":  "",
+                   "country":  "in",
+                   "query":  "software engineer",
+                   "resultsPerPage":  50,
+                   "pages":  2
+               },
+    "llmProvider":  "gemini",
+    "openai":  {
+                   "enabled":  true,
+                   "model":  "gpt-4.1-mini",
+                   "embeddingModel":  "text-embedding-3-small",
+                   "rankerTemperature":  0.2,
+                   "coverLetterTemperature":  0.7,
+                   "analysisTemperature":  0.3,
+                   "enableEmbeddings":  false,
+                   "enableNormalization":  false,
+                   "enableQualityScore":  false,
+                   "enableCompanyBrief":  false,
+                   "enableResumeGap":  false,
+                   "enableOutreach":  true,
+                   "enableTriage":  false,
+                   "enableAtsSim":  false,
+                   "enableResumeVariants":  false,
+                   "enablePortfolioBlurb":  false,
+                   "enableMultiAgent":  false,
+                   "enableRedFlags":  false,
+                   "enableContactDiscovery":  true,
+                   "enablePublicContactSearch":  true
+               },
+    "gemini":  {
+                   "enabled":  true,
+                   "model":  "gemini-2.5-flash",
+                   "embeddingModel":  "gemini-embedding-001",
+                   "rankerTemperature":  0.2,
+                   "coverLetterTemperature":  0.7,
+                   "analysisTemperature":  0.3,
+                   "minDelayMs":  12000
+               }
+}
