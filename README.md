@@ -63,7 +63,7 @@ Only outreach + cover letters are enabled. Other AI enrichments are disabled for
 ## GitHub Pages (Free Hosting)
 
 This repo includes a workflow that:
-- runs daily at **03:30 UTC**
+- runs daily at **09:00 UTC**
 - also supports manual triggers
 - deploys `site/` to GitHub Pages via GitHub Actions
 
