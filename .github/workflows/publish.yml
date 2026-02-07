@@ -23,6 +23,9 @@ jobs:
           distribution: "temurin"
           java-version: "21"
 
+      - name: Make Gradle executable
+        run: chmod +x gradlew
+
       - name: Run agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
