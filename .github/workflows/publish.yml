@@ -2,7 +2,7 @@ name: Run Agent and Publish
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 3 * * *"
+    - cron: "30 3 * * 3,6"
 permissions:
   contents: write
   pages: write
@@ -32,7 +32,9 @@ jobs:
           git config user.name "pdk01"
           git config user.email "pranavkaushik001@gmail.com"
           git add -A
-          git commit -m "chore: daily agent run $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          for i in 1 2 3 4 5; do
+            git commit --allow-empty -m "chore: scheduled agent run $i/5 $(date +'%Y-%m-%d')"
+          done
           git push
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
